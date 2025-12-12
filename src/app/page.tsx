@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 
  function page() {
 
@@ -37,6 +37,9 @@ const handleApi = async () =>{
   console.log(data);
 }
 
+useEffect(() => {
+handleApi()
+},[])
   
   return (
     <div> 
