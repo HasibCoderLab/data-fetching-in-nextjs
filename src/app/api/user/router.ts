@@ -3,6 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request:NextRequest) {
     return NextResponse.json({
         name:"Hasib",
-        age:14
+        age:18
     })
 }

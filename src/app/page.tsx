@@ -1,9 +1,18 @@
 import React from 'react'
 
-const page = () => {
+async function page() {
+  let response = await fetch('http://localhost:3000/api/user',{
+    cache:'no-store'
+  });
+  let data = await response.json()
+  console.log(data);
+  
   return (
-    <div>page</div>
+    <div> 
+
+    </div>
   )
 }
 
-export default page
+
+export default  page
