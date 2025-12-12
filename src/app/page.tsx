@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 
-async function page() {
+ function page() {
 
   //  ============== SSR==============
   // let response = await fetch('http://localhost:3000/api/user',{
@@ -19,11 +20,23 @@ async function page() {
 // ==================   ISR        =========
 
 
-    let response = await fetch('http://localhost:3000/api/user',{
+  //   let response = await fetch('http://localhost:3000/api/user',{
+  //   next:{revalidate:5}
+  // });
+  // let data = await response.json()
+  // console.log(data);
+
+
+// ========================  CSR ============
+
+const handleApi = async () =>{
+     let response = await fetch('api/user',{
     next:{revalidate:5}
   });
   let data = await response.json()
   console.log(data);
+}
+
   
   return (
     <div> 
